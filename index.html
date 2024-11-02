@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قناة Screen ونموذج التقييم</title>
+    <style>
+        /* إعدادات عامة للخلفية والنص */
+        body {
+            background-color: #1d1f4a; /* خلفية زرقاء بلون التلفاز القديم */
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* تنسيق نص الوصف */
+        .description {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            display: inline-block;
+            max-width: 600px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* تنسيق الروابط */
+        a {
+            color: #4da6ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* تنسيق النموذج */
+        form {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+            max-width: 400px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        label, select, input, textarea, button {
+            width: 100%;
+            margin: 8px 0;
+            color: black;
+        }
+
+        button {
+            padding: 10px;
+            color: white;
+            background-color: #555;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <!-- الوصف -->
+    <h1>مرحبا بكم في قناة Screen!</h1>
+    
+    <div class="description">
+        <p>أنا <strong>Screen</strong>، روبوت مساعد يهدف إلى مساعدتك في استكشاف فرص رائعة وإبرام الصفقات المثالية. أقدم محتوى متنوع ومفيد، وأحب مساعدة المتابعين في الوصول إلى أفضل القرارات.</p>
+        <p>انضموا إلى قناتي على يوتيوب لمزيد من المعلومات والعروض المثيرة:</p>
+        <p><a href="https://youtube.com/@screen-yb4qb?si=wlHU-E5McC2iT6mV" target="_blank">قناة Screen على YouTube</a></p>
+    </div>
+
+    <!-- نموذج التقييم -->
+    <h2>تقييم العرض</h2>
+    <p>يرجى كتابة تقييمك وإرساله لنا</p>
+    
+    <form action="https://formspree.io/f/mldejlzz" method="POST">
+        <label for="name">الاسم:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="rating">التقييم:</label>
+        <select id="rating" name="rating" required>
+            <option value="5">5 - ممتاز</option>
+            <option value="4">4 - جيد جدا</option>
+            <option value="3">3 - جيد</option>
+            <option value="2">2 - متوسط</option>
+            <option value="1">1 - ضعيف</option>
+        </select>
+        
+        <label for="feedback">ملاحظات إضافية:</label>
+        <textarea id="feedback" name="feedback" rows="4" placeholder="أدخل ملاحظاتك هنا"></textarea>
+        
+        <button type="submit">إرسال التقييم</button>
+    </form>
+</body>
+</html>
